@@ -1,31 +1,44 @@
-# AngularCliProject
+Creating a new project using Angular CLI
+1. Install nodejs/npm
+2. npm install -g angular-cli
+3. ng new my-new-project (creates a folder in the directory your in and puts your project there)
+4. ng generate (cl: class, c: component, d: directive, e: enum, m: module, p: pipe, s: service) (uses best practices)
+5. ng generate component header
+6. ng generate module foo --routing
+7. ng generate component path/to/header
+8. ng serve 
+	a. compiles SCSS/LESS
+	b. TypeScript transpilation
+	c. Bundles JavaScript, CSS
+	d. Asset Optimization
+	e. Virtual filesystem for assets
+	f. live loading via websockets
+	g. code splitting (lazy loading)
+	
+9.  ng build --prod --bh /Angular%202%20Training/angular-cli-project/dist/ (create production app with root html pointing at production folder)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
+10. (add to package.json
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	"@types/socket.io": "^1.4.27",
+    "@types/socket.io-client": "^1.4.27",
+    "socket.io": "~1.4.8",
+    "socket.io-client": "~1.4.8",
+	)
+10. install types for socket.io (npm install --save @types/socket.io) (npm install @types/socket.io)
 
-## Code scaffolding
+11. install karma plugin in intellij (install karma globally using npm - npm install karma -g)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+12. to use karma in intellij
+  - right click karma.conf.js file
+  - create karma.conf.js
+  - hit okay
+  - hit green run button in the top right of ide
+    - Karma tool will launch with test results
+	
+	
+	
+	
+**
+npm install to install dependencies
+npm start to start project
+ng test to run tests
