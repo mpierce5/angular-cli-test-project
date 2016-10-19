@@ -7,6 +7,21 @@ import * as io from 'socket.io-client';
 export class KSLFeedService {
   private url = 'http://localhost:5000';
   private socket;
+  private categorySocket;
+
+  getCategoryObservable() {
+    let observable = new Observable(obvserver => {
+      this.categorySocket = io(this.url);
+      return () => {
+        this.categorySocket.disconnect();
+      };
+    });
+    return observable;
+  }
+
+  changeCategory(categoryID){
+    this.categorySocket.emit('change-category', categoryID);
+  }
 
   getMessages() {
     let observable = new Observable(observer => {
@@ -20,5 +35,7 @@ export class KSLFeedService {
     });
     return observable;
   }
+
+
 }
 

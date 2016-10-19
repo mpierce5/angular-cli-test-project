@@ -1,0 +1,6 @@
+<select #t (change)="updateCategory(t.value)">
+  <option *ngFor="let category of categories" [value]="category.category">
+    {{category.name}}
+  </option>
+</select>
+{{selectedCategory}}
