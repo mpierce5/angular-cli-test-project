@@ -5,7 +5,7 @@ import * as io from 'socket.io-client';
 
 @Injectable()
 export class KSLFeedService {
-  private url = 'http://localhost:5000';
+  private url = 'http://michaelnpierce.org:5000/';
   private socket;
   private categorySocket;
 

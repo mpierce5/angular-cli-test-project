@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header-navigation-component.component.html',
   styleUrls: ['./header-navigation-component.component.css']
 })
-export class HeaderNavigationComponentComponent implements OnInit {
+export class HeaderNavigationComponent implements OnInit {
   pageTitle: string = 'Navigation Component';
   constructor() { }
 

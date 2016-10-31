@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { KSLLiveFeed } from './ksl-live-feed-component/ksl-live-feed-component.component';
 import { KSLFeedService }   from './ksl-feed-service.service';
 import { KslCategoryDropdownComponentComponent } from './ksl-category-dropdown-component/ksl-category-dropdown-component.component';
-import { HeaderNavigationComponentComponent } from './header-navigation-component/header-navigation-component.component';
-import { DashboardComponent} from './dashboard-component/dashboard-component.component'
+import { HeaderNavigationComponent } from './header-navigation-component/header-navigation-component.component';
+import { DashboardComponent} from './dashboard-component/dashboard-component.component';
+import { BarleyFishComponent } from './barley-fish-component/barley-fish-component.component';
+import { CommentsReportComponent } from './comments-report-component/comments-report-component.component'
 
 
 @NgModule({
@@ -17,8 +19,10 @@ import { DashboardComponent} from './dashboard-component/dashboard-component.com
     AppComponent,
     KSLLiveFeed,
     KslCategoryDropdownComponentComponent,
-    HeaderNavigationComponentComponent,
-    DashboardComponent
+    HeaderNavigationComponent,
+    DashboardComponent,
+    BarleyFishComponent,
+    CommentsReportComponent
 ],
   imports: [
     BrowserModule,
@@ -27,11 +31,13 @@ import { DashboardComponent} from './dashboard-component/dashboard-component.com
     RouterModule.forRoot([
       { path: 'home', component: AppComponent},
       { path: 'dashboard', component: DashboardComponent},
+      { path: 'barleyFish', component: BarleyFishComponent},
+      { path: 'commentsReport', component: CommentsReportComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: '**', redirectTo: 'home', pathMatch: 'full'}
     ])
   ],
   providers: [KSLFeedService],
-  bootstrap: [HeaderNavigationComponentComponent]
+  bootstrap: [HeaderNavigationComponent]
 })
 export class AppModule { }
